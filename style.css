@@ -188,10 +188,10 @@ body {
     padding: 0.75rem;
 }
 
-.news-card {
+/* .news-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-}
+} */
 
 .news-card:hover {
     transform: translateY(-5px);
