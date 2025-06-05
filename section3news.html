@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +13,7 @@
     body {
       background-color: #f0f2f5;
     }
+
     .news-container,
     .news-box,
     .inning-box {
@@ -19,25 +21,30 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
+
     .headline-text {
       font-weight: 700;
       color: #212529;
     }
+
     .news-heading {
       font-size: 1.5rem;
       font-weight: bold;
     }
+
     .inning-heading {
       font-size: 1.4rem;
       font-weight: 600;
       color: #b30000;
     }
+
     .inning-text,
     .news-content {
       font-size: 1.05rem;
       line-height: 1.7;
       text-align: justify;
     }
+
     img {
       max-width: 100%;
       height: auto;
@@ -45,7 +52,9 @@
     }
   </style>
 </head>
+
 <body>
+  <div id="navbar-placeholder"></div>
 
   <div class="container my-5 p-4 news-container text-center">
     <h1 class="headline-text fs-4">
@@ -54,7 +63,9 @@
   </div>
 
   <div class="container text-center mb-4">
-    <img src="https://staticimg.amarujala.com/assets/images/2025/06/03/ipl-2025-ipl-2025-final-analysis-pbks-vs-rcb-final-analysis-pbks-vs-rcb-head-to-head-pbks-vs-rcb_9257a5774c544223b94c8951f29dd1e7.jpeg?w=674&dpr=1.0&q=80" alt="RCB Win">
+    <img
+      src="https://staticimg.amarujala.com/assets/images/2025/06/03/ipl-2025-ipl-2025-final-analysis-pbks-vs-rcb-final-analysis-pbks-vs-rcb-head-to-head-pbks-vs-rcb_9257a5774c544223b94c8951f29dd1e7.jpeg?w=674&dpr=1.0&q=80"
+      alt="RCB Win">
     <p class="mt-2">आरसीबी की टीम आईपीएल चैंपियन बन गई है ..</p>
   </div>
 
@@ -81,8 +92,20 @@
       191 रन के लक्ष्य का पीछा करने उतरी पंजाब की टीम की शुरुआत अच्छी रही थी...
     </div>
   </div>
+  <!-- footer  -->
+  <div id="footer-placeholder"></div>
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
 </body>
+
 </html>

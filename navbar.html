@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NDTV Style Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.6); /* transparent black */
+      backdrop-filter: blur(6px);
+    }
+
+    .navbar-brand {
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      color: white !important;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #ffc107 !important;
+      border-radius: 5px;
+    }
+
+    .premium-link {
+      color: #c89a44 !important;
+      font-weight: bold;
+    }
+
+    .dropdown-menu {
+      background-color: rgba(0, 0, 0, 0.95);
+      border: none;
+    }
+
+    .dropdown-item {
+      color: white;
+      transition: background 0.3s;
+    }
+
+    .dropdown-item:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ffc107;
+    }
+
+    /* Show dropdown on hover (Bootstrap class override) */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
+    .navbar-toggler {
+      background-color: rgba(255, 255, 255, 0.15); /* transparent bg */
+      border: 1px solid #fff;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23fff' stroke-width='2' viewBox='0 0 24 24'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' d='M4 6h16M4 12h16M4 18h16'%3e%3c/path%3e%3c/svg%3e");
+    }
+
+    .content {
+      padding-top: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand fw-bold" href="#">
+        <span style="color: white;">N</span><span style="color: red;">D</span><span style="color: white;">TV</span>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-danger" href="#" data-bs-toggle="dropdown">🔴Live TV</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">NDTV India</a></li>
+              <li><a class="dropdown-item" href="#">NDTV 24x7</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Latest</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">India</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Politics</a></li>
+              <li><a class="dropdown-item" href="#">Economy</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">World</a></li>
+          <li class="nav-item"><a class="nav-link premium-link" href="#">Premium</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Video</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Cities</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Delhi</a></li>
+              <li><a class="dropdown-item" href="#">Mumbai</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Web Stories</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Education</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Results</a></li>
+              <li><a class="dropdown-item" href="#">Admissions</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a class="btn btn-outline-warning" href="login.html">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page content
+  <div class="container content">
+    <h1>Welcome to NDTV Style Page</h1>
+    <p>This is the content section.</p>
+    <div style="height: 1000px;"></div>
+  </div> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
