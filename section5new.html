@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>News Detail Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f1f1f1;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .news-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .news-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .news-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    .news-date {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .recommended {
+      background-color: #ffecec;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .recommended h5 {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .recommend-card {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .recommend-card img {
+      width: 80px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .recommend-card div {
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <div class="container py-4">
+    <div class="row g-4">
+      
+      <!-- Left: Main News Content -->
+      <div class="col-lg-8">
+        <div class="news-container">
+          <img src="./img/obi-UEQvUtRs224-unsplash.jpg" class="news-image" alt="Main News">
+          <div class="news-date">अपडेटेड 9 June 2025 at 11:56 IST</div>
+          <div class="news-title mt-3">
+            Cristiano Ronaldo: चैंपियन बनते ही छलके आंसू, विराट कोहली के बाद रोनाल्डो ने फैंस को...
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Recommended Section -->
+      <div class="col-lg-4">
+        <div class="recommended">
+          <h5>Recommended</h5>
+          
+          <!-- Card 1 -->
+          <div class="recommend-card">
+            <img src="./img/pexels-digitalbuggu-167538.jpg" alt="Recommendation 1">
+            <div>
+              <strong>Numerology: आपका मूलांक क्या है?</strong><br>
+              ऐसे करें कैलकुलेट<br>
+              <span style="color: #d40000;">फोटो गैलरी</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="recommend-card">
+            <img src="./img/kp5.jpg" alt="Recommendation 2">
+            <div>
+              <strong>क्या रोनाल्डो रिटायर होंगे?</strong><br>
+              फैंस के सवाल पर जवाब<br>
+              <span style="color: #d40000;">स्पोर्ट्स न्यूज़</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="recommend-card">
+            <img src="./img/kp5.jpg" alt="Recommendation 3">
+            <div>
+              <strong>राहुल गांधी का बयान</strong><br>
+              चुनाव को लेकर चर्चा<br>
+              <span style="color: #d40000;">राजनीति</span>
+            </div>
+          </div>
+
+          <!-- More cards can be added below -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer  -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+
+</body>
+</html>
