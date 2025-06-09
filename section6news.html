@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>News Categories</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .news-title {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .row img {
+            height: 100px;
+            object-fit: cover;
+        }
+
+        .news-tags span {
+            font-size: 14px;
+            margin-right: 10px;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .tag-aajtak {
+            background-color: black;
+            color: white;
+        }
+
+        .tag-crime {
+            background-color: #e60000;
+            color: white;
+        }
+
+        .headline {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .subheadline {
+            font-size: 16px;
+            color: #333;
+        }
+
+
+        .category-slide {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            min-height: 400px;
+        }
+
+        .category-slide img {
+            width: 100%;
+            /* Full width */
+            height: 300px;
+            /* Fixed height or adjust as needed */
+            object-fit: cover;
+            /* Ensure image covers without distortion */
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="container">
+        <div class="news-tags py-3 mb-2">
+            <span class="text-muted">Hindi News</span>
+            <span class="tag-aajtak">आज तक</span>
+            <span class="tag-crime">बड़े अपराध</span>
+        </div>
+
+        <div class="headline">
+            कॉन्ट्रैक्ट किलिंग, बदलते ठिकाने और 'सीक्रेट कॉल'... राजा रघुवंशी मर्डर केस में इश्क से साजिश तक की पूरी
+            कहानी!
+        </div>
+
+        <div class="subheadline mt-3">
+            <strong>Raja Raghuvanshi Murder Case:</strong> मध्य प्रदेश के इंदौर के राजा रघुवंशी मर्डर केस में आरोपी
+            पत्नी सोनम रघुवंशी ने उत्तर प्रदेश के गाजीपुर में सरेंडर कर दिया है। इस साजिश में शामिल तीन कॉन्ट्रैक्ट
+            किलर्स आकाश, विशाल और आनंद को भी गिरफ्तार कर लिया गया है। पुलिस की पूछताछ में आरोपियों ने कई बड़े खुलासे किए
+            हैं।
+        </div>
+
+
+        <div class="row mt-3 gx-2">
+            <div class="col-4">
+                <img src="https://picsum.photos/200/200?5" class="img-fluid rounded" alt="Extra News 1" />
+            </div>
+            <div class="col-4">
+                <img src="https://picsum.photos/200/200?23" class="img-fluid rounded" alt="Extra News 2" />
+            </div>
+            <div class="col-4">
+                <img src="https://picsum.photos/200/200?9" class="img-fluid rounded" alt="Extra News 3" />
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="container py-5">
+        <h2 class="mb-4 text-center">News Categories</h2>
+
+        <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <!-- Top Stories -->
+                <div class="carousel-item active">
+                    <div class="category-slide text-center">
+                        <h4>Top Stories</h4>
+                        <a href="topstories.html">
+                            <img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-37976,resizemode-75,msid-110668509/news/politics-and-nation/bjps-supreme-leader-jibe-to-rahul-gandhis-narender-surrender/rahul-modi-agency.jpg"
+                                alt="Top Stories">
+                            <div class="news-title">Breaking News From India and the World</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Politics -->
+                <div class="carousel-item">
+                    <div class="category-slide text-center">
+                        <h4>Politics</h4>
+                        <a href="politics.html">
+                            <img src="https://picsum.photos/200/200?4" alt="Politics">
+                            <div class="news-title">Latest Political Developments and Statements</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- World -->
+                <div class="carousel-item">
+                    <div class="category-slide text-center">
+                        <h4>World</h4>
+                        <a href="world.html">
+                            <img src="https://picsum.photos/200/200?6" alt="World">
+                            <div class="news-title">Global Headlines and Events</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+</body>
+
+</html>
