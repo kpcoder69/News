@@ -1,120 +1,400 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>IndiGo Bird Hit News</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #fff;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #fff;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
 
-        /*text-align: center;
-            color:aliceblue;
-            background-color :rgb(224, 0, 0);
-            font-weight: 800px;
-            font-size: large;
-            padding: 5px;
-             background: rgba(255, 255, 255, 0.5); */
-        .head {
-            text-align: center;
-            color: aliceblue;
-            background-color: rgba(224, 0, 0, 0.5);
-            font-weight: 800;
-            font-size: large;
-            padding: 5px;
-        }
+    .main-scroll-area {
+      height: 100vh;
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+    }
 
+    .related-news h5,
+    .trending-news h5 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
 
+    .related-news p,
+    .trending-news p {
+      margin-bottom: 0.5rem;
+    }
 
-        .tag {
-            background-color: #d8232a;
-            color: #fff;
-            padding: 2px 10px;
-            font-size: 14px;
-            border-radius: 2px;
-            margin-right: 10px;
-        }
+    .trending-item {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.8rem;
+    }
 
-        .headline {
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
+    .trending-item:last-child {
+      border: none;
+    }
 
-        .subheadline {
-            font-weight: bold;
-            font-size: 1.25rem;
-        }
+    .ad-box {
+      background-color: #eee;
+      padding: 1rem;
+      text-align: center;
+      margin-top: 1.5rem;
+      border: 1px solid #ddd;
+    }
 
-        .content {
-            font-size: 1rem;
-            margin-top: 10px;
-        }
+    .main-article h1 {
+      font-weight: bold;
+    }
 
-        .news-image {
-            width: 100%;
-            height: 400px;
-            display: block;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-top: 15px;
-            margin-bottom: 15px;
+    .carousel-inner img {
+      border-radius: 8px;
+    }
 
+    a {
+      color: #333;
+      text-decoration: none;
+    }
 
-        }
-    </style>
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+      height: 100vh;
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #f2f2f2;
+    }
+
+    @media (max-width: 991px) {
+
+      .left-sidebar,
+      .right-sidebar {
+        height: auto;
+      }
+
+      .main-scroll-area {
+        height: auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div id="navbar-placeholder"></div>
-    <div class="head mt-2">
-        <h3> NEWS-DETAIL</h3>
-    </div><br>
 
+  <!-- Header -->
+  <div id="navbar-placeholder"></div> 
+  <h2>Space rahega</h2> 
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <div class="mb-2 d-flex align-items-center">
-            <span class="me-2">Hindi News</span>
-            <span class="tag">साइंस न्यूज़</span>
-        </div>
-
-        <div class="headline mb-2">
-            IndiGo Bird Hit: <span class="subheadline">साइज नहीं स्पीड से तबाही... कैसे एक किलो का पक्षी तोड़ देता है
-                सैकड़ों टन भारी विमान, ये है विज्ञान</span>
-        </div>
-
-        <div class="content text-muted">
-            विमान सामान्य रूप से 200 से 900 किमी/घंटा की रफ्तार से उड़ते हैं। ऐसी स्थिति में पक्षी का वजन भले ही केवल एक
-            किलो हो, टकराव की गतिज ऊर्जा बहुत अधिक होती है। उदाहरण के लिए, 300 किमी/घंटा की रफ्तार से उड़ रहे विमान से
-            टकराने वाला 1 किलो का पक्षी लगभग 3400 न्यूटन का बल उत्पन्न कर सकता है, जो एक भारी हथौड़े के प्रहार के बराबर
-            हो सकता है।
-        </div>
-        <!-- Image Only -->
-        <img src="https://akm-img-a-in.tosshub.com/aajtak/images/story/202506/683ea21e67107-bird-hit-news-031951952-16x9.jpeg?size=948:533"
-            alt="Bird Hit Image" class="news-image" />
+      <a class="navbar-brand fw-bold" href="#">NDTV WORLD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">US</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">India Global</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Asia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Africa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Videos</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="container">
-        <h5>बहराइच में एक बार फिर नरभक्षी भेड़िए ने अपनी दस्तक दे दी है। सोमवार की रात को लगभग साढ़े 12 बजे नरभक्षी ने
-            एक मासूम पर हमला बोला और एक मां की गोद से उसका 3 वर्षीय बेटा छीनकर लेकर भाग गया। सुब इस मासूम का क्षत-विक्षत
-            शव गन्ने के खेत से बरामद हुआ। भेड़िए ने बच्चे के दोनों हाथ और एक पैर को चबा लिया था।</h5>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Left Sidebar -->
+      <div class="col-lg-2 left-sidebar">
+        <div class="related-news mb-4">
+          <h5>Related News</h5>
+          <p><a href="#">India To Face Pakistan In Cricket Again</a></p>
+          <p><a href="#">Gary Kirsten Slams PCB</a></p>
+          <p><a href="#">BJP Demands Apology</a></p>
+        </div>
+        <div class="trending-news mb-4">
+          <h5>Trending News</h5>
+          <div class="trending-item"><strong>1</strong> <br><a href="#">Video: Bengaluru Rapido Driver Slaps Woman After
+              Rash Driving Complaint</a></div>
+          <div class="trending-item"><strong>2</strong> <br><a href="#">Updates: Israel's Big Claim On Iran's Regime
+              Change As Tehran Rains Missiles</a></div>
+          <div class="trending-item"><strong>3</strong> <br><a href="#">Hours Before Murder, Sonam, Raja Raghuvanshi
+              Seen Trekking In Meghalaya</a></div>
+          <div class="trending-item"><strong>4</strong> <br><a href="#">'7 Careers Ruined, Dhoni To Be Sacked...':
+              Yograj Exposes Ex-BCCI Selectors</a></div>
+          <div class="trending-item"><strong>5</strong> <br><a href="#">Filmmaker Missing Since Air India Crash, Wife
+              Fears He May Be Ground Victim</a></div>
+        </div>
+        <!-- Item 1 -->
+        <div class="mb-4 text-center">
+          <img src="/img/img.jpg" alt="boAt Airdopes"
+            class="img-fluid rounded">
+          <p class="mt-2 mb-0">boAt Airdopes 91 Prime, 45HRS Battery, 13mm...</p>
+          <p class="fw-bold text-success mb-0">₹699 <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" style="height: 16px;"></p>
+          <p class="text-success small">(82% off)</p>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="mb-4 text-center">
+          <img src="/img/img1.jpg" alt="Canon Printer"
+            class="img-fluid rounded">
+          <p class="mt-2 mb-0">Canon PIXMA E470 All in One (Print, Scan, Copy)</p>
+          <p class="fw-bold text-success mb-0">₹6,148 <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" style="height: 16px;"></p>
+        </div>
+
+        <div class="ad-box">
+          <p>Advertisement</p>
+          <img src="/img/kp1.jpg" alt="Left Ad" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Main Content Scrollable -->
+      <div class="col-lg-7 main-scroll-area">
+        <div class="main-article">
+          <h1>Pakistan Will Nuke Israel If It Uses Nuclear Weapon Against Us, Claims Iran</h1>
+          <p class="text-secondary">By Chandrajit Mitra | World News | Jun 16, 2025 11:01 am IST | Read Time: 3 mins</p>
+          <p>Mohsen Rezae's remarks came during an interview on the Iranian state television as a barrage of missiles
+            crisscrossed Iran and Israel.</p>
+
+          <!-- Carousel -->
+          <div id="newsCarousel" class="carousel slide my-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/img/kp5.jpg" class="d-block w-100" alt="News Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/kp3.jpg" class="d-block w-100" alt="News Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="/img/pexels-arjunadinata-30700800.jpg" class="d-block w-100" alt="News Image 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- ✅ Content Below Carousel (White Background Section) -->
+          <div class="p-4 bg-white text-dark rounded">
+            <p><strong>Tehran:</strong> Pakistan will launch a nuclear attack on Israel if it drops a nuclear bomb on
+              Iran, a top Iranian officer of its elite forces has claimed amid rising tensions in the Middle East.
+              General Mohsen Rezae's remarks came during an interview on Iranian television as a barrage of missiles
+              crisscrossed Iran and Israel. So far, about 248 deaths (Iran 230 and Israel 18) have been reported in the
+              two countries.</p>
+
+            <p>"Pakistan has assured us that if Israel uses a nuclear bomb on Iran, they will attack Israel with a
+              nuclear bomb," said Rezaei, a senior officer in the Islamic Revolutionary Guard Corps (IRGC) and a member
+              of Iran's National Security Council.</p>
+
+            <p><strong>Iran-Israel conflict live updates <a href="#" class="text-primary">here</a></strong></p>
+
+            <p>Israel and Pakistan are among the nine countries that currently possess nuclear weapons, according to
+              ICAN (International Campaign to Abolish Nuclear Weapons).</p>
+
+            <p>Pakistan has vowed to "stand behind Iran" and called on the Muslim world to unite, Rezae said, pointing
+              to a bonhomie that follows an ugly missile exchange between the two countries in early 2024. He also
+              claimed that Tehran has hidden capabilities that are yet to be revealed to the world.</p>
+
+            <p>There has been no comment from Pakistan on using nuclear weapons against Israel, but the country has
+              backed Iran in its fight against Israel, which has the support of the Western world.</p>
+            <!-- 🔴 Ad Video Section -->
+            <div class="my-4">
+              <div class="bg-light border rounded">
+                <div class="p-1 bg-dark text-white small d-flex justify-content-between">
+                  <span>Ad : (0:04)</span>
+                  <span>Powered by <strong>VDO.AI</strong></span>
+                </div>
+                <video width="100%" controls poster="https://via.placeholder.com/800x450.png?text=Ad+Thumbnail">
+                  <source src="your-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+
+            <p><strong>Read:</strong> <a href="#">Iran Rejects Truce Talks As Israel Pounds Tehran, Sirens Heard In Tel
+                Aviv</a></p>
+            <p>Such assurances, even if true, appear to reflect diplomatic support and not military backing...</p>
+
+            <!-- More Article Text -->
+            <p>Such assurances, even if true, appear to reflect diplomatic support and not military backing...</p>
+            <p>President Donald Trump... has claimed that he has been trying to work out a deal between the two warring
+              countries...</p>
+            <p>In one of his strongest statements since taking over as the President in January, Trump warned Iran...
+            </p>
+            <p>Pakistan, a crucial weapons market for the US, last night flagged concerns over Israel’s nuclear
+              prowess...</p>
+
+
+            <!-- 🧾 Article Footer Section -->
+            <div class="bg-white text-dark p-3 mt-4 rounded border-top">
+              <p class="mb-1">
+                Track <strong>Latest News</strong> Live on NDTV.com and get <strong>news</strong> updates from
+                <strong>India</strong> and around the world
+              </p>
+
+              <!-- Social Media Icons -->
+              <div class="d-flex align-items-center gap-3 mt-2">
+                <span><strong>Follow us:</strong></span>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/000000/twitterx.png" alt="X"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/fa314a/youtube-play.png" alt="YouTube"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/4CAF50/whatsapp.png" alt="WhatsApp"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/3b5998/facebook-new.png" alt="Facebook"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/E1306C/instagram-new.png"
+                    alt="Instagram"></a>
+              </div>
+
+              <!-- Bottom Tag/Category -->
+              <div class="mt-3 small text-end">
+                <em>Iran-Israel Conflict, Pakistan, Nuclear Attack</em>
+              </div>
+
+              <!--Cards Section -->
+              <div class="row g-3">
+                <!-- Card 1 -->
+                <div class="col-md-6">
+                  <div class="card text-dark h-100">
+                    <img src="/img/obi-UEQvUtRs224-unsplash.jpg" class="card-img-top" alt="Honda CR-V">
+                    <div class="card-body">
+                      <h6 class="card-title">The Killer New Honda CR-V Is Utter Perfection (Take A Look)</h6>
+                      <p class="card-text text-primary">Has Honda Done It Again? The New CR-V Is Finally Here</p>
+                      <small class="text-muted">SneakerToast | Sponsored</small>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6">
+                  <div class="card text-dark h-100">
+                    <img src="/img/kp2.jpg" class="card-img-top" alt="Adidas Pants">
+                    <div class="card-body">
+                      <h6 class="card-title">Direct Shopping From Adidas Franchise Store, Up To 50% Off</h6>
+                      <p class="card-text">Expiring Offer Soon, Limited Stock, Cash On Delivery Free, Easy Return &
+                        Exchange</p>
+                      <small class="text-muted">Original Adidas | Sponsored</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Sponsored Section - 3 Cards -->
+              <h5 class="mt-4 mb-3 text-dark">Sponsored</h5>
+              <div class="row g-3">
+
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                  <div class="card bg-white text-dark h-100 shadow-sm">
+                    <img src="/img/kp4.jpg" class="card-img-top" alt="Honda CR-V">
+                    <div class="card-body">
+                      <h6 class="card-title fw-bold">The Killer New Honda CR-V Is Utter Perfection</h6>
+                      <p class="card-text small text-primary mb-1">Has Honda Done It Again? Find Out</p>
+                      <small class="text-muted">SneakerToast | Sponsored</small>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                  <div class="card bg-white text-dark h-100 shadow-sm">
+                    <img src="/img/img2.jpg" class="card-img-top" alt="Adidas Pants Offer">
+                    <div class="card-body">
+                      <h6 class="card-title fw-bold">Shop Adidas Franchise Store, Up To 50% Off</h6>
+                      <p class="card-text small mb-1">Easy Return & Free Delivery</p>
+                      <small class="text-muted">Original Adidas | Sponsored</small>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                  <div class="card bg-white text-dark h-100 shadow-sm">
+                    <img src="/img/kp4.jpg" class="card-img-top" alt="Honor a Forgotten Father">
+                    <div class="card-body">
+                      <h6 class="card-title fw-bold">Honor a Forgotten Father Today</h6>
+                      <p class="card-text small mb-1">Be Their Family This Father’s Day</p>
+                      <small class="text-muted">HelpAge India | Sponsored</small>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 📢 Right Sidebar: Don't Miss Section -->
+      <div class="col-lg-3 right-sidebar">
+        <div class="ad-box mb-4">
+          <p>Advertisement</p>
+          <img src="/img/pexels-digitalbuggu-167538.jpg" alt="Right Ad" class="img-fluid">
+        </div>
+        <div class="ad-box">
+          <img src="/img/pexels-digitalbuggu-167538.jpg" alt="Bottom Ad" class="img-fluid">
+          <p class="mt-2">Buy Brass Idols – Handmade Brass Art</p>
+        </div>
+        <div class="text-dark p-3 rounded">
+          <h5 class="border-bottom pb-2 mb-3">Don't Miss</h5>
+
+          <!-- Card 1 -->
+          <div class="mb-3">
+            <img src="/img/kp5.jpg" class="img-fluid rounded mb-2">
+            <p class="mb-1">Sarfaraz Khan Hit, Ruturaj Gaikwad Flop...</p>
+            <small>NDTV</small>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="mb-3">
+            <img src="/img/kp3.jpg" class="img-fluid rounded mb-2">
+            <p class="mb-1">Honor a Forgotten Father Today</p>
+            <small>HelpAge India | Sponsored</small>
+            <button class="btn btn-sm btn-warning mt-1">Donate Now</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div>
+            <img src="/img/pexels-arjunadinata-30700800.jpg" class="img-fluid rounded mb-2">
+            <p class="mb-1">Australian Selectors Urged To Drop...</p>
+            <small>NDTV</small>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- footer  -->
-    <div id="footer-placeholder"></div>
-    <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        fetch('navbar.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
+  </div>
 
-        fetch('footer.html')
-          .then(res => res.text())
-          .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-    </script>
+   <!-- footer  -->
+  <div id="footer-placeholder"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar-placeholder').innerHTML = data);
 
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
 </body>
 
 </html>
