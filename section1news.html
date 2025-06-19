@@ -66,7 +66,7 @@
     }
 
     a:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     .left-sidebar,
@@ -75,6 +75,11 @@
       overflow-y: auto;
       padding: 1rem;
       background-color: #f2f2f2;
+    }
+
+    .sticky-top {
+      z-index: 1030;
+      /* Default Bootstrap value */
     }
 
     @media (max-width: 991px) {
@@ -94,10 +99,10 @@
 <body>
 
   <!-- Header -->
-  <div id="navbar-placeholder"></div> 
-  <h2>Space rahega</h2> 
+  <div id="navbar-placeholder"></div>
+  <h2>Space rahega</h2>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">NDTV WORLD</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -141,8 +146,7 @@
         </div>
         <!-- Item 1 -->
         <div class="mb-4 text-center">
-          <img src="/img/img.jpg" alt="boAt Airdopes"
-            class="img-fluid rounded">
+          <img src="/img/img.jpg" alt="boAt Airdopes" class="img-fluid rounded">
           <p class="mt-2 mb-0">boAt Airdopes 91 Prime, 45HRS Battery, 13mm...</p>
           <p class="fw-bold text-success mb-0">₹699 <img
               src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" style="height: 16px;"></p>
@@ -151,8 +155,7 @@
 
         <!-- Item 2 -->
         <div class="mb-4 text-center">
-          <img src="/img/img1.jpg" alt="Canon Printer"
-            class="img-fluid rounded">
+          <img src="/img/img1.jpg" alt="Canon Printer" class="img-fluid rounded">
           <p class="mt-2 mb-0">Canon PIXMA E470 All in One (Print, Scan, Copy)</p>
           <p class="fw-bold text-success mb-0">₹6,148 <img
               src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" style="height: 16px;"></p>
@@ -302,7 +305,7 @@
                 <!-- Card 1 -->
                 <div class="col-md-4">
                   <div class="card bg-white text-dark h-100 shadow-sm">
-                    <img src="/img/kp4.jpg" class="card-img-top" alt="Honda CR-V">
+                    <img src="/img/kp2.jpg" class="card-img-top" alt="Honda CR-V">
                     <div class="card-body">
                       <h6 class="card-title fw-bold">The Killer New Honda CR-V Is Utter Perfection</h6>
                       <p class="card-text small text-primary mb-1">Has Honda Done It Again? Find Out</p>
@@ -326,7 +329,7 @@
                 <!-- Card 3 -->
                 <div class="col-md-4">
                   <div class="card bg-white text-dark h-100 shadow-sm">
-                    <img src="/img/kp4.jpg" class="card-img-top" alt="Honor a Forgotten Father">
+                    <img src="/img/kp5.jpg" class="card-img-top" alt="Honor a Forgotten Father">
                     <div class="card-body">
                       <h6 class="card-title fw-bold">Honor a Forgotten Father Today</h6>
                       <p class="card-text small mb-1">Be Their Family This Father’s Day</p>
@@ -382,7 +385,7 @@
     </div>
   </div>
 
-   <!-- footer  -->
+  <!-- footer  -->
   <div id="footer-placeholder"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
